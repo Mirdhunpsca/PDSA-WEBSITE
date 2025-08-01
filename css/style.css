@@ -349,3 +349,20 @@ main {
   --success-green: #198754;
   --error-maroon: #8B0000;
 }
+
+/* Responsive logo layout */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-left, .logo-right {
+    max-width: 80%;
+    margin: 5px 0;
+  }
+
+  .header-wrapper h1 {
+    font-size: 1rem;
+  }
+}
