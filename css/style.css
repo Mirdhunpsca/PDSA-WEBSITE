@@ -223,7 +223,7 @@ main {
     }
 
 /* ABOUT PAGE STYLING */
-    .about-us {
+  .about-us {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
@@ -361,4 +361,17 @@ main {
   .header-wrapper h1 {
     font-size: 1rem;
   }
+}
+/* gallery page layout */
+.gallery-section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
 }
