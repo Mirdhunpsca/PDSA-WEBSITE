@@ -8,25 +8,38 @@
 </head>
 <body>
 
-    <header>
-        <div class="header-wrapper">
-            <IMG src="images/PDSA.png" class="logo-left" alt="logo left" />
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; border-bottom: 2px solid #FFA500;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="images/PDSA.png" alt="Logo" style="height: 60px;">
+        <img src="images/tnsa.jpg" alt="Logo" style="height: 60px;">
+    </div>
+    <h1 style="font-size: 1.5rem;">PUDUKKOTTAI DISTRICT SILAMBATTAM ASSOCIATION</h1>
+    <div class="menu-icon" onclick="toggleMenu()" style="cursor: pointer; display: none;">
+        &#9776;
+    </div>
+    <nav id="nav-menu" style="display: flex; gap: 20px;">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Pasarai</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact Us</a>
+    </nav>
+</header>
 
-            <h1>PUDUKKOTTAI DISTRICT SILAMBATTAM ASSOCIATION</h1>
+<style>
+@media (max-width: 768px) {
+    #nav-menu { display: none; flex-direction: column; position: absolute; top: 70px; right: 20px; background: white; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+    .menu-icon { display: block; }
+}
+</style>
 
-            <img src="images/tnsa.jpg" class="logo-right" alt="logo right"  />
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="pasarai.html">Pasarai</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+}
+</script>
+
 
     <main>
         <section>
