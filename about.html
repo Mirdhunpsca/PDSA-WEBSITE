@@ -1,32 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PUDUKKOTTAI DISTRICT SILAMBATTAM ASSOCIATION</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pudukottai District Silambattam Association</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body { margin: 0; font-family: sans-serif; background: #f9f9f9; }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 2px solid #FFA500;
+        }
+
+        .header img {
+            height: 70px;
+            width: auto;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            flex: 1;
+            color: #333;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #FFA500;
+            padding: 10px 0;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #333;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header img {
+                height: 50px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-wrapper">
-            <IMG src="images/PDSA.png" class="logo-left" alt="logo left" />
+<header class="header">
+    <img src="images/PDSA.png" alt="Pudukottai Logo">
+    <div class="title">PUDUKKOTTAI DISTRICT SILAMBATTAM ASSOCIATION</div>
+    <img src="images/tnsa.jpg" alt="Tamil Nadu Logo">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</header>
 
-            <h1>PUDUKKOTTAI DISTRICT SILAMBATTAM ASSOCIATION</h1>
+<nav class="nav" id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="pasarai.html">Pasarai</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+</nav>
 
-            <img src="images/tnsa.jpg" class="logo-right" alt="logo right"  />
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="pasarai.html">Pasarai</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+</script>
     <main>
         <section class="about-us">
   <h2>About Us</h2>
